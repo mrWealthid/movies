@@ -11,7 +11,10 @@ function Movieform({handleSubmit}) {
 
   const [error, setError] = useState(false)
 
-handleValidation
+function handleValidation(val) {
+    console.log(val)
+  }
+
 
   function submit() {
     if(control.duration.includes('m')|| control.duration.includes('h')   ) {
