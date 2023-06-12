@@ -1,6 +1,30 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-function Movieform() {
+function Movieform({handleSubmit}) {
+
+  const [control, setControl] = useState({
+    name: '',
+    rating : 0,
+    duration: ''
+  })
+
+
+  const [error, setError] = useState(false)
+
+
+  function submit() {
+    if(control.duration.includes('m')|| control.duration.includes('h') ) {
+      setError(false)
+      handleSubmit(control)
+    }
+  else {
+      setError(true)
+    }
+  }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setControl({ ...control, [name]: value });
+  };
 
   return (
     <section>
@@ -13,6 +37,9 @@ function Movieform() {
               id='name'
               placeholder='Enter Movie Name'
               data-testid='nameInput'
+              name='name'
+              value={control.name}
+              onChange={handleChange}
             />
           </div>
           <div className='layout-column mb-15'>
@@ -22,6 +49,9 @@ function Movieform() {
               id='ratings'
               placeholder='Enter Rating on a scale of 1 to 100'
               data-testid='ratingsInput'
+              onChange={handleChange}
+              name='rating'
+              value={control.rating}
             />
           </div>
           <div className='layout-column mb-30'>
@@ -31,20 +61,24 @@ function Movieform() {
               id='duration'
               placeholder='Enter duration in hours or minutes'
               data-testid='durationInput'
+              name='duration'
+              onChange={handleChange}
+              value={control.duration}
             />
           </div>
           {/* Use this div when time format is invalid */}
-          {/* <div 
+          {error&& <div
             className='alert error mb-30'
             data-testid='alert'
           >
             Please specify time in hours or minutes (e.g. 2.5h or 150m)
-          </div>  */}
+          </div>  }
           <div className='layout-row justify-content-end'>
             <button 
               type='submit'
               className='mx-0'
               data-testid='addButton'
+              onClick={submit}
             >
               Add Movie
             </button>
