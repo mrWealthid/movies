@@ -1,14 +1,32 @@
 import React from 'react'
 
 function Movieslist({movies}) {
+
+    function convertDurationToHrs (duration){
+
+        if(duration.includes('h')) {
+            let value = duration.split('h')
+            return value[0] + 'Hrs'
+        }else if(duration.includes('m')) {
+
+            let value = duration.split('m')
+            let durationInHrs = (Number(value[0])/60).toFixed(2)
+           return durationInHrs + "Hrs"
+        }
+
+
+
+
+    }
+
   return (
     <section>
          <ul
         className='styled w-100 pl-0' 
         data-testid='moviesList'
       >
-            {movies.map((movie)=> (
-                <li
+            {movies.map((movie, index)=> (
+                <li key={index}
                     className='flex slide-up-fade-in justify-content-between'
                     style={{borderBottom: '2px solid var(--primary-color)'}}
                 >
@@ -20,7 +38,7 @@ function Movieslist({movies}) {
                     </div>
                     <div className='layout-row my-auto mr-20'>
                         {/* use this paragraph for movie duration, for example: '2.5 Hrs' */}
-                        <p className='justify-content-end'>{movie.duration}</p>
+                        <p className='justify-content-end'>{convertDurationToHrs(movie.duration)}</p>
                     </div>
                 </li>))}
       </ul>
