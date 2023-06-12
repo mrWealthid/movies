@@ -16,6 +16,11 @@ function Movieform({handleSubmit}) {
     if(control.duration.includes('m')|| control.duration.includes('h') ) {
       setError(false)
       handleSubmit(control)
+      setControl({
+        name: '',
+        rating : 0,
+        duration: ''
+      })
     }
   else {
       setError(true)
@@ -26,6 +31,12 @@ function Movieform({handleSubmit}) {
     setControl({ ...control, [name]: value });
   };
 
+  function handleFocus(e) {
+    if(e.target){
+setError(false)
+    }
+
+  }
   return (
     <section>
       <div className='card pa-30'>
@@ -40,6 +51,7 @@ function Movieform({handleSubmit}) {
               name='name'
               value={control.name}
               onChange={handleChange}
+              onFocus={handleFocus}
             />
           </div>
           <div className='layout-column mb-15'>
@@ -52,6 +64,7 @@ function Movieform({handleSubmit}) {
               onChange={handleChange}
               name='rating'
               value={control.rating}
+              onFocus={handleFocus}
             />
           </div>
           <div className='layout-column mb-30'>
@@ -64,6 +77,7 @@ function Movieform({handleSubmit}) {
               name='duration'
               onChange={handleChange}
               value={control.duration}
+              onFocus={handleFocus}
             />
           </div>
           {/* Use this div when time format is invalid */}
