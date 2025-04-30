@@ -1,27 +1,6 @@
 import React from "react";
 
 function Movieslist({ movies }) {
-  //   function convertDurationToHrs(duration) {
-  //     let valueInHrs = "";
-  //     const validationPattern = /^(\d+m)$/i.test(duration);
-
-  //     if (validationPattern) {
-  //       const value = duration.replace(/m$/, "");
-  //       valueInHrs = (Number(value) / 60).toFixed(2) + " Hrs";
-  //     } else {
-  //       valueInHrs = duration.replace(/h$/, "") + "Hrs";
-  //     }
-  //     // if (duration.includes("h")) {
-  //     //   let value = duration.split("h");
-  //     //   return value[0] + "Hrs";
-  //     // } else if (duration.includes("m")) {
-  //     //   let value = duration.split("m");
-  //     //   let durationInHrs = (Number(value[0]) / 60).toFixed(2);
-  //     //   return durationInHrs + " Hrs";
-  //     // }
-  //     return valueInHrs;
-  //   }
-
   return (
     <section>
       <ul className="styled w-100 pl-0" data-testid="moviesList">
