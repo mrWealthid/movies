@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="11" failures="0" errors="0" time="0.778">
-  <testsuite name="Favorite Movie Directory" errors="0" failures="0" skipped="0" timestamp="2025-04-30T20:18:35" time="0.469" tests="11">
-    <testcase classname="Favorite Movie Directory should not initially show the no result message or list" name="Favorite Movie Directory should not initially show the no result message or list" time="0.021">
+<testsuites name="jest tests" tests="11" failures="0" errors="0" time="1.07">
+  <testsuite name="Favorite Movie Directory" errors="0" failures="0" skipped="0" timestamp="2025-04-30T21:06:56" time="0.683" tests="11">
+    <testcase classname="Favorite Movie Directory should not initially show the no result message or list" name="Favorite Movie Directory should not initially show the no result message or list" time="0.019">
     </testcase>
-    <testcase classname="Favorite Movie Directory should add a row with valid data and not show the no result message" name="Favorite Movie Directory should add a row with valid data and not show the no result message" time="0.015">
+    <testcase classname="Favorite Movie Directory should add a row with valid data and not show the no result message" name="Favorite Movie Directory should add a row with valid data and not show the no result message" time="0.014">
     </testcase>
-    <testcase classname="Favorite Movie Directory should not add the row if name or ratings or duration is empty" name="Favorite Movie Directory should not add the row if name or ratings or duration is empty" time="0.011">
+    <testcase classname="Favorite Movie Directory should not add the row if name or ratings or duration is empty" name="Favorite Movie Directory should not add the row if name or ratings or duration is empty" time="0.012">
     </testcase>
-    <testcase classname="Favorite Movie Directory should add duration in hours if entered in minutes" name="Favorite Movie Directory should add duration in hours if entered in minutes" time="0.005">
+    <testcase classname="Favorite Movie Directory should add duration in hours if entered in minutes" name="Favorite Movie Directory should add duration in hours if entered in minutes" time="0.006">
     </testcase>
-    <testcase classname="Favorite Movie Directory should not add the row if data invalid" name="Favorite Movie Directory should not add the row if data invalid" time="0.007">
+    <testcase classname="Favorite Movie Directory should not add the row if data invalid" name="Favorite Movie Directory should not add the row if data invalid" time="0.006">
     </testcase>
-    <testcase classname="Favorite Movie Directory should show alert message if duration data invalid" name="Favorite Movie Directory should show alert message if duration data invalid" time="0.005">
+    <testcase classname="Favorite Movie Directory should show alert message if duration data invalid" name="Favorite Movie Directory should show alert message if duration data invalid" time="0.004">
     </testcase>
-    <testcase classname="Favorite Movie Directory should hide alert message after user starts typing in some input" name="Favorite Movie Directory should hide alert message after user starts typing in some input" time="0.004">
+    <testcase classname="Favorite Movie Directory should hide alert message after user starts typing in some input" name="Favorite Movie Directory should hide alert message after user starts typing in some input" time="0.006">
     </testcase>
-    <testcase classname="Favorite Movie Directory should add multiple rows in sorted order" name="Favorite Movie Directory should add multiple rows in sorted order" time="0.015">
+    <testcase classname="Favorite Movie Directory should add multiple rows in sorted order" name="Favorite Movie Directory should add multiple rows in sorted order" time="0.011">
     </testcase>
-    <testcase classname="Favorite Movie Directory should start search when at least 2 characters are entered" name="Favorite Movie Directory should start search when at least 2 characters are entered" time="0.039">
+    <testcase classname="Favorite Movie Directory should start search when at least 2 characters are entered" name="Favorite Movie Directory should start search when at least 2 characters are entered" time="0.04">
     </testcase>
-    <testcase classname="Favorite Movie Directory should filter movies by starting characters" name="Favorite Movie Directory should filter movies by starting characters" time="0.014">
+    <testcase classname="Favorite Movie Directory should filter movies by starting characters" name="Favorite Movie Directory should filter movies by starting characters" time="0.016">
     </testcase>
-    <testcase classname="Favorite Movie Directory should show no result message and not show list when the search returns no match" name="Favorite Movie Directory should show no result message and not show list when the search returns no match" time="0.014">
+    <testcase classname="Favorite Movie Directory should show no result message and not show list when the search returns no match" name="Favorite Movie Directory should show no result message and not show list when the search returns no match" time="0.011">
     </testcase>
   </testsuite>
 </testsuites>

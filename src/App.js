@@ -48,17 +48,11 @@ function App() {
     setSearch(target.value);
 
     if (target.value.length >= 2) {
-      let searchResult = movies.filter((movie) =>
-        movie.name.toLowerCase().includes(target.value.toLowerCase())
+      setMovies(
+        movies.filter((movie) =>
+          movie.name.toLowerCase().includes(target.value.toLowerCase())
+        )
       );
-      // console.log(searchResult);
-      // if (searchResult) {
-      //   setMovies(searchResult);
-      // } else {
-      //   setMovies();
-      // }
-
-      setMovies(searchResult);
     } else {
       setMovies(movies);
     }
